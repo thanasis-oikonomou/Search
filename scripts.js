@@ -16,7 +16,7 @@ jQuery(document).ready( function($){
         
         if (key == 40) // Down key
         {
-            $listItems.removeClass('selected');
+            //$listItems.removeClass('selected');
             if (!$selected.length || $selected.is(':last-child')) {
                 $current = $listItems.eq(0);
             } else {
@@ -25,7 +25,7 @@ jQuery(document).ready( function($){
         } 
         else if (key == 38) // Up key
         {
-            $listItems.removeClass('selected');
+            //$listItems.removeClass('selected');
             if (!$selected.length || $selected.is(':first-child')) {
                 $current = $listItems.last();
             } else {
@@ -43,7 +43,8 @@ jQuery(document).ready( function($){
             $('#site-search').submit();
             return true;
         }
-        $current.addClass('selected');
+        //$current.addClass('selected');
+        $current.trigger('mouseover');
     });
     
     var timer;
@@ -101,6 +102,15 @@ jQuery(document).ready( function($){
                                 $('#submit-btn').removeClass('invalid-param');
                                 valid = 1;
                                 
+                            });
+
+                            $('.search-form ul li').mouseover(function(){
+                                $('.search-form ul li').removeClass('selected');
+                                $(this).addClass('selected');
+                            });
+
+                            $('.search-form ul li').mouseleave(function(){
+                                $(this).removeClass('selected');
                             });
 
                             //console.log(val.name);
