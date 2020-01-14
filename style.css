@@ -99,7 +99,7 @@ img{
     padding: 5px 2px;
 }
 
-.search-form ul li:hover,.search-form ul li.selected{
+.search-form ul li.selected{
     cursor:pointer;
     background: #fef0d0;
 }
