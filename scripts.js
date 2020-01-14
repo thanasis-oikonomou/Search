@@ -67,7 +67,7 @@ jQuery(document).ready( function($){
             delay = 1500;
         }
 
-        console.log(delay);
+        //console.log(delay);
         
         window.clearTimeout(timer);
         timer = window.setTimeout(function(){
